@@ -12,8 +12,10 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
-  $('.saveBtn').click(function(){
+  $('.saveBtn').click(function(event){
     console.log(this);
+    event.preventDefault;
+
     var hour = $(this).parent().find(".hour").text();
     var event = $(this).siblings(".description").val();
     localStorage.setItem("time", hour);
@@ -31,8 +33,16 @@ $(function () {
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
+// maybe use ('#sjhsb").append("<p>string </p>")
+// if want before contrainer use .before instead OR .after 
 
-
+  var userEvent = localStorage.getItem("event");
+  // console.log(userInput);
+ 
+  // $('#hour-11 .description').val(userInput);
+  $('#hour-9 .description').val(userEvent,);
+  $('#hour-10 .description').val(userEvent);
+  $('#hour-11 .description').val(userEvent);
   
   //
   // TODO: Add code to display the current date in the header of the page.
