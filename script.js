@@ -18,8 +18,7 @@ $(function () {
 
     var hour = $(this).parent().find(".hour").text();
     var event = $(this).siblings(".description").val();
-    localStorage.setItem("time", hour);
-    localStorage.setItem("event", event);
+    localStorage.setItem(hour,event);
 
   });
 
@@ -30,6 +29,7 @@ $(function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   //
+
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
@@ -37,10 +37,10 @@ $(function () {
 // if want before contrainer use .before instead OR .after 
 
   var userEvent = localStorage.getItem("event");
-  // console.log(userInput);
+  console.log(userEvent);
  
   // $('#hour-11 .description').val(userInput);
-  $('#hour-9 .description').val(userEvent,);
+  $('#hour-9 .description').val(userEvent);
   $('#hour-10 .description').val(userEvent);
   $('#hour-11 .description').val(userEvent);
   
