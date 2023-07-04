@@ -1,7 +1,8 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-// saveBtnEl = $("#save-btn");
+ 
+$(document).ready(function(){
 
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
@@ -11,9 +12,9 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
-  $('.saveBtn').on('click', function(){
+  $('.saveBtn').click(function(){
     console.log("worked")
-  })
+  });
 
   //
   // TODO: Add code to apply the past, present, or future class to each time
@@ -29,5 +30,7 @@ $(function () {
   // TODO: Add code to display the current date in the header of the page.
   var currentDate = dayjs();
 $('#currentDay').text(currentDate.format('MMM D, YYYY'));
+
+});
 
 });
