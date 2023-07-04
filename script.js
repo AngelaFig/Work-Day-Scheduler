@@ -13,7 +13,12 @@ $(function () {
   // useful when saving the description in local storage?
 
   $('.saveBtn').click(function(){
-    console.log("worked")
+    console.log(this);
+    var hour = $(this).parent().find(".hour").text();
+    var event = $(this).siblings(".description").val();
+    localStorage.setItem("time", hour);
+    localStorage.setItem("event", event);
+
   });
 
   //
@@ -26,6 +31,9 @@ $(function () {
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
+
+
+  
   //
   // TODO: Add code to display the current date in the header of the page.
   var currentDate = dayjs();
