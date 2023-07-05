@@ -58,7 +58,6 @@ timeTracker()
 
   var userEvent = localStorage.getItem("event");
 
-  $('#hour-8 .description').val(localStorage.getItem('8AM'));
   $('#hour-9 .description').val(localStorage.getItem('9AM'));
   $('#hour-10 .description').val(localStorage.getItem('10AM'));
   $('#hour-11 .description').val(localStorage.getItem('11AM'));
