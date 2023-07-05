@@ -37,12 +37,10 @@ $(function () {
 // if want before contrainer use .before instead OR .after 
 
   var userEvent = localStorage.getItem("event");
-  console.log(userEvent);
- 
-  // $('#hour-11 .description').val(userInput);
+
   $('#hour-9 .description').val(userEvent);
   $('#hour-10 .description').val(userEvent);
-  $('#hour-11 .description').val(userEvent);
+  $('#hour-11 .description').text(localStorage.getItem("event"));
   
   //
   // TODO: Add code to display the current date in the header of the page.
