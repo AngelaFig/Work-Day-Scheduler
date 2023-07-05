@@ -8,7 +8,7 @@ The appplication runs in the browser wherein the HTML and CSS is dynamically upd
 
 ## Usage
 
-URL: 
+URL:  https://angelafig.github.io/Work-Day-Scheduler/
 
 ![demo of application](img/05-third-party-apis-homework-demo.gif)
 
